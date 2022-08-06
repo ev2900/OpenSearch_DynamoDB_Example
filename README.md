@@ -1,1 +1,1 @@
-# DynamoDB_OpenSearch_Example
+# DynamoDB OpenSearch Example
