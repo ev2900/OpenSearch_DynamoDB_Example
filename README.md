@@ -47,13 +47,25 @@ INSERT INTO "workshop-table" VALUE {
 Delete(s)
 
 ```
-DELETE FROM "workshop-table" WHERE "person-id" = 1
-DELETE FROM "workshop-table" WHERE "person-id" = 2
-DELETE FROM "workshop-table" WHERE "person-id" = 3
+-- Delete #1
+DELETE FROM "workshop-table" WHERE 'person-id' = 1
+
+-- Delete #2
+DELETE FROM "workshop-table" WHERE 'person-id' = 2
+
+-- Delete #3
+DELETE FROM "workshop-table" WHERE 'person-id' = 3
 ```
 
 Update(s)
 
 ```
+-- Update #1
+UPDATE "workshop-table" SET name='William Smith' WHERE 'person-id' = 1
 
+-- Update #2
+UPDATE "workshop-table" SET name='Jonathan Parker' WHERE 'person-id' = 2
+
+-- Update #3
+UPDATE "workshop-table" SET name='Sr. Adam William' WHERE 'person-id' = 3
 ```
