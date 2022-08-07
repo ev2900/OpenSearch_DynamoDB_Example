@@ -20,21 +20,21 @@ The resources created by the CloudFormation stack are documented in the architec
 ```
 -- Insert #1
 INSERT INTO "workshop-table" VALUE {
-	'person-id': 1,
+    'person-id': 1,
     'name': 'Will Smith',
     'email': 'willsmith@email.com'
 }
 
 -- Insert #2
 INSERT INTO "workshop-table" VALUE {
-	'person-id': 2,
+    'person-id': 2,
     'name': 'John Parker',
     'email': 'parker@email.com'
 }
 
 -- Insert #3
 INSERT INTO "workshop-table" VALUE {
-	'person-id': 3,
+    'person-id': 3,
     'name': 'Adam William',
     'email': 'adamw@email.com'
 }
