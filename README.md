@@ -34,3 +34,11 @@ INSERT INTO "workshop-table" VALUE {
 ```
 
 6. If you log into the OpenSearch dashboard, create and index patter you can see the 3 records in OpenSearch
+
+For testing purposes to delete the records in DynamoDB via. PartiQL
+
+```
+DELETE FROM "workshop-table" WHERE "person-id" = 1
+DELETE FROM "workshop-table" WHERE "person-id" = 2
+DELETE FROM "workshop-table" WHERE "person-id" = 3
+```
