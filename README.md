@@ -42,3 +42,9 @@ DELETE FROM "workshop-table" WHERE "person-id" = 1
 DELETE FROM "workshop-table" WHERE "person-id" = 2
 DELETE FROM "workshop-table" WHERE "person-id" = 3
 ```
+
+Or for to update records in DynamoDV via. PartiQL
+
+```
+
+```
