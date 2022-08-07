@@ -1,5 +1,7 @@
 # DynamoDB OpenSearch Example
 
+The instruction below outline how to keep OpenSearch upto date with a DynamoDB table via. a Lambda function
+
 1. Run the CloudFormation stack below
 
 [![Launch CloudFormation Stack](https://sharkech-public.s3.amazonaws.com/misc-public/cloudformation-launch-stack.png)](https://console.aws.amazon.com/cloudformation/home#/stacks/new?stackName=dynamo-lambda-opensearch&templateURL=https://sharkech-public.s3.amazonaws.com/misc-public/dynamo_lambda_opensearch.yaml)
