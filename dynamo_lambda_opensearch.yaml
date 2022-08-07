@@ -1,0 +1,18 @@
+Description: This template will deploy DynamoDB, Lambda, OpenSearch domain
+
+Resources:
+  
+  # -----------------
+  # DynamoDB
+  # -----------------
+  DynamoDBTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName: workshop-table
+      BillingMode: PAY_PER_REQUEST
+      AttributeDefinitions:
+        - AttributeName: "person-id"
+          AttributeType: "N"
+      KeySchema: 
+        - AttributeName: "person-id"
+          KeyType: "HASH"
