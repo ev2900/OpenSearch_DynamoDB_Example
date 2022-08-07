@@ -69,3 +69,9 @@ UPDATE "workshop-table" SET name='Jonathan Parker' WHERE "person-id" = 2
 -- Update #3
 UPDATE "workshop-table" SET name='Sr. Adam William' WHERE "person-id" = 3
 ```
+
+Future Improvements
+* Include delete functionality in Lambda
+* Scope down DynamoDB IAM permissions
+* Test / CloudFormation a Lambda working with a OpenSearch domain deploying in a VPC / subnet
+
