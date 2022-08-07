@@ -5,7 +5,7 @@
 [![Launch CloudFormation Stack](https://sharkech-public.s3.amazonaws.com/misc-public/cloudformation-launch-stack.png)](https://console.aws.amazon.com/cloudformation/home#/stacks/new?stackName=dynamo-lambda-opensearch&templateURL=https://sharkech-public.s3.amazonaws.com/misc-public/dynamo_lambda_opensearch.yaml)
 
 2. Update the code section of the deployed lambda with the [lambda.py](https://github.com/ev2900/DynamoDB_OpenSearch_Example/blob/main/lambda.py) code
-3. Update the ```os_url```, ```index_name```, ```auth_header``` 
+3. Update the ```os_url```, ```index_name```, ```auth_header``` place holders in the lambda code
 4. Add a DynamoDB trigger to the lambda
 
 5. Use the PartiQL editor in DynamoDB insert 3 record
@@ -33,4 +33,20 @@ INSERT INTO "workshop-table" VALUE {
 }
 ```
 
-6. If you log into the OpenSearch dashboard, create and index patter you can see the 3 records in OpenSearch
+6. Log into the OpenSearch dashboard, create and index patter you can see the 3 records in OpenSearch
+
+7. Optional. Test the delete / update capabilities via. the PartiQL editor
+
+Delete(s)
+
+```
+DELETE FROM "workshop-table" WHERE "person-id" = 1
+DELETE FROM "workshop-table" WHERE "person-id" = 2
+DELETE FROM "workshop-table" WHERE "person-id" = 3
+```
+
+Update(s)
+
+```
+
+```
