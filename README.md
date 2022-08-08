@@ -12,7 +12,7 @@ The resources created by the CloudFormation stack are documented in the architec
 
 
 2. Update the code section of the deployed lambda with the [lambda.py](https://github.com/ev2900/DynamoDB_OpenSearch_Example/blob/main/lambda.py) code
-3. Update the ```os_url```, ```index_name```, ```auth_header``` place holders in the lambda code
+3. Update the ```<os_url>```place holder in the lambda code
 4. Add a DynamoDB trigger to the lambda
 
 5. Use the PartiQL editor in DynamoDB insert 3 record
