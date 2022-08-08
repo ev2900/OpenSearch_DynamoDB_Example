@@ -44,15 +44,28 @@ Resources:
             Statement:
               - Effect: Allow
                 Action: 
-                  - 'dynamodb:*'
+                  - 'dynamodb:BatchGetItem'
+                  - 'dynamodb:GetItem'
+                  - 'dynamodb:Query'
+                  - 'dynamodb:Scan'
+                  - 'dynamodb:BatchWriteItem'
+                  - 'dynamodb:PutItem'
+                  - 'dynamodb:UpdateItem'
                 Resource: 
-                  - 'arn:aws:dynamodb:us-east-1:*:*'
+                  - !Sub 'arn:aws:dynamodb:${AWS::Region}:${AWS::AccountId}:table/workshop-table'
         - PolicyName: lambda_logs
           PolicyDocument:
             Version: '2012-10-17'
             Statement:
               - Effect: Allow
-                Action: 'logs:*'
+                Action: 
+                  - 'logs:CreateLogStream'
+                  - 'logs:PutLogEvents'
+                Resource:
+                  - !Sub 'arn:aws:logs:${AWS::Region}:${AWS::AccountId}:*'
+              - Effect: Allow
+                Action: 
+                  - 'logs:CreateLogGroup'
                 Resource: '*'
 
   # -----------------
