@@ -54,11 +54,11 @@ def lambda_handler(event, context):
     # ------
     # Send DynamoDB Evenet(s) to OpenSearch via. bulk API
     # ------
-        #print(bulk_documents_opensearch)
+    #print(bulk_documents_opensearch)
     
     http = urllib3.PoolManager()
     
-    os_url = 'https://search-workshop-domain-ookon32tfja4s4aowqoocbgxbq.us-east-1.es.amazonaws.com'.rstrip("/")
+    os_url = '<os_url>'.rstrip("/")
     index_name = 'person'
     auth_header = urllib3.make_headers(basic_auth='OSMasterUser:AwS#OpenSearch1')
     
