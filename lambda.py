@@ -54,7 +54,7 @@ def lambda_handler(event, context):
     # ------
     # Send DynamoDB Evenet(s) to OpenSearch via. bulk API
     # ------
-        #print(bulk_documents_opensearch)
+    #print(bulk_documents_opensearch)
     
     http = urllib3.PoolManager()
     
