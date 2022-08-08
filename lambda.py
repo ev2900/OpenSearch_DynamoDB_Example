@@ -8,20 +8,19 @@ def lambda_handler(event, context):
 
     bulk_documents_opensearch = ''
     
+    print("Batch Count: " + str(len(dynamo_events)))
+    
+    # Parse DynamoDB Change Evenet 
+    #print(event['dynamodb']['NewImage']['person-id']['N'])
+    #print(event['dynamodb']['NewImage']['name']['S'])
+    #print(event['dynamodb']['NewImage']['email']['S'])
+    
     for event in dynamo_events:
         #print(event)
         
         if event['eventName'] != 'REMOVE':
             #print("Not a delete")
-            
-            # ------
-            # Parse DynamoDB Change Evenet 
-            # ------
-        
-            #print(event['dynamodb']['NewImage']['person-id']['N'])
-            #print(event['dynamodb']['NewImage']['name']['S'])
-            #print(event['dynamodb']['NewImage']['email']['S'])
-            
+
             document_body = {
                 "personid": event['dynamodb']['NewImage']['person-id']['N'],
                 "name": event['dynamodb']['NewImage']['name']['S'],
@@ -37,21 +36,31 @@ def lambda_handler(event, context):
     
             bulk_documents_opensearch = str(bulk_documents_opensearch) + str(meta_data) + str('\n')
             bulk_documents_opensearch = str(bulk_documents_opensearch) + str(document_body) + str('\n')
+            bulk_documents_opensearch = bulk_documents_opensearch.replace("'", "\"")
             
         else:
-            print("Delete")
+            # print("Delete")
+            
+            meta_data = {
+                "delete": 
+                {
+                  "_id": str(event['dynamodb']['OldImage']['person-id']['N'])
+                }
+            }
+    
+            bulk_documents_opensearch = str(bulk_documents_opensearch) + str(meta_data) + str('\n')
+            bulk_documents_opensearch = bulk_documents_opensearch.replace("'", "\"")
         
     # ------
     # Send DynamoDB Evenet(s) to OpenSearch via. bulk API
     # ------
-    #print(bulk_documents_opensearch)
-    bulk_documents_opensearch = bulk_documents_opensearch.replace("'", "\"")
+        #print(bulk_documents_opensearch)
     
     http = urllib3.PoolManager()
     
-    os_url = '<os_domain_url>'.rstrip("/")
-    index_name = '<os_index_name>'
-    auth_header = urllib3.make_headers(basic_auth='<username>:<password>')
+    os_url = 'https://search-workshop-domain-ookon32tfja4s4aowqoocbgxbq.us-east-1.es.amazonaws.com'.rstrip("/")
+    index_name = 'person'
+    auth_header = urllib3.make_headers(basic_auth='OSMasterUser:AwS#OpenSearch1')
     
     resp = http.request(
         'POST',
@@ -61,10 +70,10 @@ def lambda_handler(event, context):
     )
     
     # API Response
-    print('Request sent')
-    print('Response status = ' + str(resp.status))
+    # print('Request sent')
+    print('OpenSearch response status = ' + str(resp.status))
     #print(resp.headers)
-    print('Response body = ' + str(resp.data.decode('utf-8')))
+    print('OpenSearch response body = ' + str(resp.data.decode('utf-8')))
 
     return {
         'statusCode': 200,
