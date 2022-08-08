@@ -34,7 +34,7 @@ Resources:
               Service:
                 - lambda.amazonaws.com
             Action:
-              - 'sts:AssumeRole'
+                - 'sts:AssumeRole'
       # Premissions
       Policies:
         # DynamoDB
@@ -44,15 +44,13 @@ Resources:
             Statement:
               - Effect: Allow
                 Action: 
-                  - 'dynamodb:BatchGetItem'
-                  - 'dynamodb:GetItem'
-                  - 'dynamodb:Query'
-                  - 'dynamodb:Scan'
-                  - 'dynamodb:BatchWriteItem'
-                  - 'dynamodb:PutItem'
-                  - 'dynamodb:UpdateItem'
+                  - 'dynamodb:GetRecords'
+                  - 'dynamodb:GetShardIterator'
+                  - 'dynamodb:DescribeStream'
+                  - 'dynamodb:ListStreams'
                 Resource: 
                   - !Sub 'arn:aws:dynamodb:${AWS::Region}:${AWS::AccountId}:table/workshop-table'
+                  - !Sub 'arn:aws:dynamodb:${AWS::Region}:${AWS::AccountId}:table/workshop-table/*'
         - PolicyName: lambda_logs
           PolicyDocument:
             Version: '2012-10-17'
