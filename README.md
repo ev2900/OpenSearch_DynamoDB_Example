@@ -71,6 +71,5 @@ DELETE FROM "workshop-table" WHERE "person-id" = 3
 ```
 
 Future Improvements
-* Scope down DynamoDB IAM permissions
 * Test / CloudFormation a Lambda working with a OpenSearch domain deploying in a VPC / subnet
 
