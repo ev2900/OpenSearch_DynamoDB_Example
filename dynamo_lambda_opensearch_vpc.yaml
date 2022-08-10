@@ -300,7 +300,7 @@ Resources:
   EC2Server:
     Type: AWS::EC2::Instance
     Properties:
-      ImageId: 'ami-052efd3df9dad4825'
+      ImageId: 'ami-05912b6333beaa478'
       InstanceType: 't2.xlarge'
       SubnetId: !Ref EC2Subnet
       SecurityGroupIds:
