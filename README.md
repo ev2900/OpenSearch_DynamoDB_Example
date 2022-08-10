@@ -10,6 +10,11 @@ The resources created by the CloudFormation stack are documented in the architec
 
 <img alt="dynamo-lambda-os" src="https://github.com/ev2900/DynamoDB_OpenSearch_Example/blob/main/Architecture/dynamo-lambda-opensearch.png">
 
+Or run the CloudFormation stack below to deploy a VPC based architecture 
+
+[![Launch CloudFormation Stack](https://sharkech-public.s3.amazonaws.com/misc-public/cloudformation-launch-stack.png)](https://console.aws.amazon.com/cloudformation/home#/stacks/new?stackName=dynamo-lambda-opensearch&templateURL=https://sharkech-public.s3.amazonaws.com/misc-public/dynamo_lambda_opensearch_vpc.yaml)
+
+[     ]
 
 2. Update the code section of the deployed lambda with the [lambda.py](https://github.com/ev2900/DynamoDB_OpenSearch_Example/blob/main/lambda.py) code
 3. Update the ```<os_url>```place holder in the lambda code

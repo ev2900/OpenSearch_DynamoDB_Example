@@ -30,3 +30,6 @@ jobs:
           
       - name: Upload msk_cluster.yaml to S3
         run: aws s3 cp /home/runner/work/DynamoDB_OpenSearch_Example/DynamoDB_OpenSearch_Example/dynamo_lambda_opensearch.yaml s3://sharkech-public/misc-public/dynamo_lambda_opensearch.yaml
+        
+      - name: Upload dynamo_lambda_opensearch_vpc.yaml to S3
+        run: aws s3 cp /home/runner/work/DynamoDB_OpenSearch_Example/DynamoDB_OpenSearch_Example/dynamo_lambda_opensearch_vpc.yaml s3://sharkech-public/misc-public/dynamo_lambda_opensearch_vpc.yaml
