@@ -400,9 +400,6 @@ Resources:
       VpcId: !Ref VPC
       RouteTableIds:
         - !Ref VPCRouteTable
-      Tags:
-        - Key: Name
-          Value: 'dynamodb-endpoint'
 
 Outputs:
   # OpenSearch domain
