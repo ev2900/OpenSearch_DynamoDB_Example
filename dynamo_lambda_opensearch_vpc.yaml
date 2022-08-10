@@ -67,7 +67,7 @@ Resources:
       VpcId: !Ref VPC
       Tags:
         - Key: Name
-          Value: ec2-subnet | us-east-1a  
+          Value: ec2-lambda-subnet | us-east-1a  
 
   # -----------------
   # Network Security Groups
@@ -235,7 +235,7 @@ Resources:
   LambdaIAMRole:
     Type: AWS::IAM::Role
     Properties:
-      RoleName: 'Lambda-MSK-OpenSearch-Role'
+      RoleName: 'Workshop_Lambda'
       Description: 'IAM role for Lambda Function to use'
       # Trust relationships
       AssumeRolePolicyDocument:
