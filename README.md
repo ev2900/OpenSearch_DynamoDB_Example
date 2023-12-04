@@ -1,6 +1,6 @@
 # DynamoDB OpenSearch Example
 
-<img width="85" alt="map-user" src="https://img.shields.io/badge/views-0000-green"> <img width="125" alt="map-user" src="https://img.shields.io/badge/unique visits-0000-green">
+<img width="85" alt="map-user" src="https://img.shields.io/badge/views-037-green"> <img width="125" alt="map-user" src="https://img.shields.io/badge/unique visits-0000-green">
 
 The instruction below outline how to keep OpenSearch upto date with a DynamoDB table via. a Lambda function
 
@@ -12,7 +12,7 @@ The resources created by the CloudFormation stack are documented in the architec
 
 <img alt="dynamo-lambda-os" src="https://github.com/ev2900/DynamoDB_OpenSearch_Example/blob/main/Architecture/dynamo-lambda-opensearch.png">
 
-Or run the CloudFormation stack below to deploy a VPC based architecture 
+Or run the CloudFormation stack below to deploy a VPC based architecture
 
 [![Launch CloudFormation Stack](https://sharkech-public.s3.amazonaws.com/misc-public/cloudformation-launch-stack.png)](https://console.aws.amazon.com/cloudformation/home#/stacks/new?stackName=dynamo-lambda-opensearch&templateURL=https://sharkech-public.s3.amazonaws.com/misc-public/dynamo_lambda_opensearch_vpc.yaml)
 
