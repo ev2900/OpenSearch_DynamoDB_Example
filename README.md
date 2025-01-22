@@ -1,6 +1,6 @@
 # DynamoDB OpenSearch Example
 
-<img width="275" alt="map-user" src="https://img.shields.io/badge/cloudformation template deployments-22-blue"> <img width="85" alt="map-user" src="https://img.shields.io/badge/views-253-green"> <img width="125" alt="map-user" src="https://img.shields.io/badge/unique visits-094-green">
+<img width="275" alt="map-user" src="https://img.shields.io/badge/cloudformation template deployments-22-blue"> <img width="85" alt="map-user" src="https://img.shields.io/badge/views-253-green"> <img width="125" alt="map-user" src="https://img.shields.io/badge/unique visits-095-green">
 
 The instruction below outline how to keep OpenSearch upto date with a DynamoDB table via. a Lambda function
 
