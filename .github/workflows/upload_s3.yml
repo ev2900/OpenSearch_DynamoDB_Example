@@ -29,7 +29,5 @@ jobs:
           aws-region: us-east-1
           
       - name: Upload dynamo_lambda_opensearch.yaml to S3
-        run: aws s3 cp /home/runner/work/DynamoDB_OpenSearch_Example/DynamoDB_OpenSearch_Example/dynamo_lambda_opensearch.yaml s3://sharkech-public/misc-public/dynamo_lambda_opensearch.yaml
+        run: aws s3 cp /home/runner/work/OpenSearch_DynamoDB_Example/OpenSearch_DynamoDB_Example/dynamo_lambda_opensearch.yaml s3://sharkech-public/misc-public/dynamo_lambda_opensearch.yaml
         
-      - name: Upload dynamo_lambda_opensearch_vpc.yaml to S3
-        run: aws s3 cp /home/runner/work/DynamoDB_OpenSearch_Example/DynamoDB_OpenSearch_Example/dynamo_lambda_opensearch_vpc.yaml s3://sharkech-public/misc-public/dynamo_lambda_opensearch_vpc.yaml
